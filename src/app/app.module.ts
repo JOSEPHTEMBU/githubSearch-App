@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { GithubComponent } from './github/github.component';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { TimeCountPipe } from './time-count.pipe';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
     HomeComponent,
     GithubComponent,
     SearchFormComponent,
+    TimeCountPipe,
     
   ],
   imports: [
