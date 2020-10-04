@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { User } from '../user';
+
 
 @Component({
   selector: 'app-user-repository',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-repository.component.css']
 })
 export class UserRepositoryComponent implements OnInit {
+
+  @Input() user: User;
 
   constructor() { }
 

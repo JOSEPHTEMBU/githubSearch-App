@@ -16,8 +16,8 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { Repository } from '../repository';
-import { SearchUserService } from '../search-user-service/search-user.service';
-import { SearchRepoService } from '../search-reporepository-service/search-repository.service';
+import { SearchUserService } from '../search-user.service';
+import { SearchRepositoryService } from '../search-repo-service.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -33,7 +33,7 @@ export class GithubComponent implements OnInit {
 
   constructor(
     private searchUserService: SearchUserService,
-    private searchRepoService: SearchRepoService,
+    private searchRepoService: SearchRepositoryService,
     private router: Router
   ) {}
 

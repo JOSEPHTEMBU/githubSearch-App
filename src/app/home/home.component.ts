@@ -1,10 +1,9 @@
 
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
-import { Repo } from '../repo';
-import { SearchUserService } from '../search-user-service/search-user.service';
-import { SearchRepoService } from '../search-repo-service/search-repo.service';
-
+import { Repository } from '../repository';
+import { SearchUserService } from '../search-user.service';
+import { SearchRepositoryService } from '../search-repo-service.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -12,15 +11,15 @@ import { SearchRepoService } from '../search-repo-service/search-repo.service';
 })
 export class HomeComponent implements OnInit {
   user: User;
-  userRepos: Repo[];
+  userRepository: Repository[];
 
   constructor(
     public searchUserService: SearchUserService,
-    public searchRepoService: SearchRepoService
+    public searchRepositoryService: SearchRepositoryService
   ) {}
 
   ngOnInit(): void {
-    this.getUser('barakamulas');
+    this.getUser('Mulama');
   }
 
   getUser(term: string) {
@@ -34,10 +33,10 @@ export class HomeComponent implements OnInit {
     );
   }
   getUserRepos(endpoint: string) {
-    this.searchRepoService.getUserRepos(endpoint).then(
+    this.searchRepositoryService.getUserRepos(endpoint).then(
       () => {
-        this.userRepos = this.searchRepoService.userRepos;
-        console.log(this.userRepos.length);
+        this.userRepository = this.searchRepositoryService.userRepos;
+        console.log(this.userRepository.length);
       },
       (error) => {
         console.log(error);

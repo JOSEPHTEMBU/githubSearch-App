@@ -47,6 +47,8 @@ import { FormsModule } from '@angular/forms';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserRepositoryComponent } from './user-repository/user-repository.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -59,8 +61,9 @@ import { UserRepositoryComponent } from './user-repository/user-repository.compo
     UserDetailsComponent,
     NotFoundComponent,
     UserRepositoryComponent,
+
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

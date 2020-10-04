@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { environment } from '../../environments/environment';
+import { environment } from '../environments/environment';
 import { Repository } from './repository';
 
 @Injectable({
@@ -76,7 +76,7 @@ export class SearchRepositoryService {
               let date = new Date(year, month, day);
               let gitHubLink = response[i]['html_url'];
               let liveLink = response[i]['homepage'];
-              let repo = new Repo(
+              let repo = new Repository(
                 i + 1,
                 name,
                 description,
