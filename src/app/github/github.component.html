@@ -1,1 +1,63 @@
-<p>github works!</p>
+<app-search-form (passSearchTerm)="search($event)"></app-search-form>
+<br />
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 users">
+      <div *ngIf="usersLength == 0" class="users-not-foun">
+        <h1>No Users Have Been Found</h1>
+      </div>
+      <div class="row">
+        <div *ngFor="let user of users" class="col-md-6">
+          <div class="card" style="width: 18rem">
+            <img src="{{ user.imagePath }}" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{ user.name }}</h5>
+
+              <button class="btn btn-info" (click)="goToUrl(user.id)">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 repos">
+      <div *ngIf="repositoryLength == 0" class="users-not-foun">
+        <h1>No Repos Have Been Found</h1>
+      </div>
+      <div class="row">
+        <div *ngFor="let repo of repository" class="col-md-6">
+          <div class="card" style="width: 18rem">
+            <div class="card-header">
+              <h5 class="card-title">{{ repository.name }}</h5>
+            </div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">
+                <strong>Language: </strong> {{ repository.language }}
+              </h6>
+              <br />
+              <p class="card-text">{{ repo.description }}</p>
+              <div class="links">
+                <a href="{{ repository.gitHubLink }}" class="btn btn-info"
+                  >Github Link</a
+                >
+                <a href="{{ repo.liveLink }}" class="btn btn-warning"
+                  >Live link</a
+                >
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <small
+                >Created
+                <strong>{{ repository.dateCreated | dateCount }}</strong>
+                ago</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

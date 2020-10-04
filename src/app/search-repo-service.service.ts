@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { repository } from '../repos';
+
 import { environment } from '../../environments/environment';
+import { Repository } from './repository';
 
 @Injectable({
   providedIn: 'root',
 })
-export class SearchRepoService {
-  foundRepos: Repo[];
-  userRepos: Repo[];
+export class SearchRepositoryService {
+  foundRepos: Repository[];
+  userRepos: Repository[];
 
   fetchRepos(term: string) {
     let endpoint = `https://api.github.com/search/repositories?access_token=${environment.apiKey}&q=${term}`;
@@ -34,7 +35,7 @@ export class SearchRepoService {
               let date = new Date(year, month, day);
               let gitHubLink = results['items'][i]['html_url'];
               let liveLink = results['items'][i]['homepage'];
-              let repo = new Repo(
+              let repository = new Repository(
                 i + 1,
                 name,
                 description,
@@ -43,7 +44,7 @@ export class SearchRepoService {
                 gitHubLink,
                 liveLink
               );
-              this.foundRepos.push(repo);
+              this.foundRepos.push(repository);
             }
             resolve();
           },
@@ -60,7 +61,7 @@ export class SearchRepoService {
   getUserRepos(endpoint) {
     let promise = new Promise((resolve, reject) => {
       this.http
-        .get<Repo[]>(endpoint + '?access_token=' + environment.apiKey)
+        .get<Repository[]>(endpoint + '?access_token=' + environment.apiKey)
         .toPromise()
         .then(
           (response) => {
