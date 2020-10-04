@@ -41,7 +41,7 @@ import { AppComponent } from './app.component';
 import { GithubComponent } from './github/github.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { HomeComponent } from './home/home.component';
+// import { HomeComponent } from './home/home.component';
 import { TimeCountPipe } from './time-count.pipe';
 import { FormsModule } from '@angular/forms';
 import { UserDetailsComponent } from './user-details/user-details.component';
@@ -54,7 +54,7 @@ import { UserRepositoryComponent } from './user-repository/user-repository.compo
     GithubComponent,
     SearchFormComponent,
     NavbarComponent,
-    HomeComponent,
+    // HomeComponent,
     TimeCountPipe,
     UserDetailsComponent,
     NotFoundComponent,
