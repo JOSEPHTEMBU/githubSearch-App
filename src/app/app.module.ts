@@ -10,6 +10,7 @@ import { TimeCountPipe } from './time-count.pipe';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { UserRepositoryComponent } from './user-repository/user-repository.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     NavbarComponent,
     NotFoundComponent,
     UserDetailsComponent,
+    UserRepositoryComponent,
 
   ],
   imports: [
