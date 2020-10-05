@@ -14,7 +14,7 @@
               <h5 class="card-title">{{ user.name }}</h5>
 
               <button class="btn btn-info" (click)="goToUrl(user.id)">
-                View Details
+                See Details
               </button>
             </div>
           </div>
@@ -33,25 +33,25 @@
             </div>
             <div class="card-body">
               <h6 class="card-subtitle mb-2 text-muted">
-                <strong>Language: </strong> {{ repository.language }}
+                <strong> Favourite Language: </strong> {{ repository.language }}
               </h6>
               <br />
               <p class="card-text">{{ repository.description }}</p>
               <div class="links">
                 <a href="{{ repository.gitHubLink }}" class="btn btn-info"
-                  >Github Link</a
+                  > Link to Github</a
                 >
-                <a href="{{ repository.liveLink }}" class="btn btn-warning"
-                  >Live link</a
+                <a href="{{ repository.liveLink }}" class="btn btn-success"
+                  > link</a
                 >
               </div>
             </div>
 
             <div class="card-footer">
               <small
-                >Created
+                >generated
                 <strong>{{ repository.dateCreated | dateCount }}</strong>
-                ago</small
+                </small
               >
             </div>
           </div>

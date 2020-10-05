@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getUser('Mulama');
+    this.getUser('JOSEPH');
   }
 
   getUser(term: string) {

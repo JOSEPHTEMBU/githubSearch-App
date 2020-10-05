@@ -1,18 +1,4 @@
-// import { Component, OnInit } from '@angular/core';
 
-// @Component({
-//   selector: 'app-github',
-//   templateUrl: './github.component.html',
-//   styleUrls: ['./github.component.css']
-// })
-// export class GithubComponent implements OnInit {
-
-//   constructor() { }
-
-//   ngOnInit(): void {
-//   }
-
-// }
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { Repository } from '../repository';
@@ -63,6 +49,6 @@ export class GithubComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.search('frank');
+    this.search('JOSEPH');
   }
 }
