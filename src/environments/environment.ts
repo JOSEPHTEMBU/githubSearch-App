@@ -8,7 +8,7 @@
 // };
 export const environment = {
   production: false,
-  apiKey: '85303cace0d63a704c4ba725d2b5a0d1cf10fdfb',
+  apiKey: 'fe5a7ce8cb37027cbdc326a9c07882c88470989e',
 };
 
 /*
